@@ -27,8 +27,8 @@ public class Robot extends TimedRobot {
   int kJoystickAxis = 0;
 
 
-  Joystick joy1 = new Joystick(0);
-  TalonFX mtalon = new TalonFX(0);
+  Joystick joy1 = new Joystick(kControllerPort);
+  TalonFX mtalon = new TalonFX(kTalonDeviceNumber);
   
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -55,7 +55,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-    mtalon.set(ControlMode.PercentOutput, joy1.getRawAxis(0));
+    mtalon.set(ControlMode.PercentOutput, joy1.getRawAxis(kJoystickAxis));
    
   }
 
