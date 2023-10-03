@@ -1,7 +1,3 @@
-// Copyright (c) FIRST and other WPILib contributors.
-// Open Source Software; you can modify and/or share it under the terms of
-// the WPILib BSD license file in the root directory of this project.
-
 package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
@@ -21,23 +17,13 @@ import edu.wpi.first.wpilibj.TimedRobot;
  * project.
  */
 public class Robot extends TimedRobot {
-
-  int kControllerPort = 0;
-  int kTalonDeviceNumber = 0;
-  int kJoystickAxis = 0;
-
-
-  Joystick joy1 = new Joystick(0);
-  TalonFX mtalon = new TalonFX(0);
   
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
   @Override
-  public void robotInit() {
-    
-  }
+  public void robotInit() {}
 
   @Override
   public void robotPeriodic() {}
@@ -49,15 +35,10 @@ public class Robot extends TimedRobot {
   public void autonomousPeriodic() {}
 
   @Override
-  public void teleopInit() {
-
-  }
+  public void teleopInit() {}
 
   @Override
-  public void teleopPeriodic() {
-    mtalon.set(ControlMode.PercentOutput, joy1.getRawAxis(0));
-   
-  }
+  public void teleopPeriodic() {}
 
   @Override
   public void disabledInit() {}
